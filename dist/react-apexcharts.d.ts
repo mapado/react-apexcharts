@@ -5,7 +5,16 @@ import { ApexOptions } from 'apexcharts'
  */
 declare module "react-apexcharts" {
   interface Props {
-    type?: "line"
+    type?: ChartType,
+    series?: Array<any>,
+    width?: string | number,
+    height?: string | number,
+    options?: ApexOptions,
+    [key: string]: any,
+}
+
+  export type ChartType =
+    | "line"
     | "area"
     | "bar"
     | "histogram"
@@ -20,12 +29,5 @@ declare module "react-apexcharts" {
     | "candlestick"
     | "radar"
     | "polarArea"
-    | "rangeBar",
-    series?: Array<any>,
-    width?: string | number,
-    height?: string | number,
-    options?: ApexOptions,
-    [key: string]: any,
-  }
-  export default class ReactApexChart extends React.Component<Props> {}    
+    | "rangeBar"; 
 }

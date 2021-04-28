@@ -1,5 +1,5 @@
 /// <reference types="react"/>
-import { ApexOptions } from '@mapado/apexcharts'
+import { ApexOptions } from 'apexcharts'
 /**
  * Basic type definitions from https://apexcharts.com/docs/react-charts/#props
  */
